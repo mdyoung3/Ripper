@@ -1,3 +1,9 @@
+#!/bin/bash
+#
+#A file full of helper functions.
+
+source variables
+
 echoy () {
     echo "Hi guys! How are you?"
 }

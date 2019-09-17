@@ -6,16 +6,13 @@
 
 set -e
 
-source includes/helpers.sh
+# shellcheck source=includes/helpers
+source includes/helpers  
 
-echoy
-
-exit
-
-cd $1 || exit
+cd "$1" || exit
 
 for d in *; do
- cd $d || exit
+ cd "$d" || exit
 done
 
 exit
