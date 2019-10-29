@@ -15,9 +15,7 @@ source includes/yaml.sh
 
 create_variables properties.yml
 
-cd ~/Videos
-
-makedir "$title"
+makedir "$HOME/$destination"
 
 echo "Starting the $title"
 
@@ -25,15 +23,11 @@ echo "$episode" > episode
 
 echo "$season" > season
 
-newseason=$(cat episode)
-
-echo "$newseason"
-
-exit
-
 for d in *; do
  cd "$d" || exit
  rip 
+ echo "What is the name of the show?"
+ read -r show_name
 done
 
 rm episode
